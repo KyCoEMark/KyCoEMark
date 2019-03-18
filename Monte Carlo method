@@ -1,0 +1,22 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    srand(time(NULL));
+    double x,y;
+    long long c=0,n=1000000;
+    for (int i=0;i<=n;i++){
+        x=(double)(rand()+1)/(RAND_MAX +2);
+        y=(double)(rand()+1)/(RAND_MAX +2);
+        if (pow((x*x+y*y),0.5)<=1){
+            c++;
+        }
+    }
+    cout<<(double)4*c/n;
+    return 0;
+}
